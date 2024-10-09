@@ -42,14 +42,14 @@ export default function Home() {
           onChange={(e) => setLanguage(e.target.value)}
           className='w-96 text-black outline-none border-spacing-4 p-3 rounded-xl text-lg m-3'
         />
-        <button type="submit" className='m-3 p-3 bg-white rounded-3xl text-black'>Generate Code</button>
+        <button type="submit" className='m-6 p-3 bg-white rounded-3xl text-black'>Generate Code</button>
       </form>
 
       {error && <p>{error}</p>}
       {code && (
-        <div className='px-9'>
-          <h2>Generated Code:</h2>
-          <pre>{code}</pre>
+        <div className='m-12 mt-0 bg-neutral-500 text-black rounded-3xl'>
+          <h2 className='px-5 py-3 text-xl text-white bg-neutral-800 rounded-t-2xl'>Output:</h2>
+          <pre className='p-5 text-wrap'>{code}</pre>
         </div>
       )}
     </div>
